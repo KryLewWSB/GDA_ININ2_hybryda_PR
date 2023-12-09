@@ -5,16 +5,25 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-
-
-        //Zadanie 11. Zadeklaruj zmienną przechowującą liczby całkowite i przypisz jej dowolną wartość początkową.
-        //Napisz instrukcję, która w przypadku gdy wartość zmiennej jest mniejsza od zera, zamieni tę wartość na dodatnią (zachowa się jak wartość bezwzględna w matematyce). Użyj operatora warunkowego.
-        //Należy wykorzystać metodę Math.abs(-5);
+        //Przykład: gra w kości z wykorzystaniem metody random()
         Scanner scan = new Scanner(System.in);
-        System.out.println("Podaj liczbę: ");
-        int podanaLiczba = scan.nextInt();
 
-        System.out.println( "Podana liczba to: " + Math.abs(podanaLiczba) );
+        while(true) {
+            System.out.println("Podaj wartość liczbową od [ 1 - 6 ]: ");
+            int podanaLIczba = scan.nextInt();
+
+            if(podanaLIczba > 0 && podanaLIczba < 7) {
+                int wylosowanaWartosc = (int) (Math.random() * 5 + 1);//wartości od 1 do 6
+                if (podanaLIczba == wylosowanaWartosc) {
+                    System.out.println("Brawo wygrałeś!" + "\nPodana wartość w konsoli: " + podanaLIczba + "\nWylosowa wartość: " + wylosowanaWartosc);
+                } else {
+                    System.out.println("Niestety przegrałeś!" + "\nPodana wartość w konsoli: " + podanaLIczba + "\nWylosowa wartość: " + wylosowanaWartosc);
+                }
+            }else{
+                System.out.println("Podałeś złą wartość! Poprawna: [ 1 - 6 ] ");
+            }
+
+        }
 
 
 
