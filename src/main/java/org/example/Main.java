@@ -5,19 +5,23 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
+
+
+        //Zadanie 11. Zadeklaruj zmienną przechowującą liczby całkowite i przypisz jej dowolną wartość początkową.
+        //Napisz instrukcję, która w przypadku gdy wartość zmiennej jest mniejsza od zera, zamieni tę wartość na dodatnią (zachowa się jak wartość bezwzględna w matematyce). Użyj operatora warunkowego.
+        //Należy wykorzystać metodę Math.abs(-5);
         Scanner scan = new Scanner(System.in);
-        int[] tablicaLiczb = new int[5];
+        System.out.println("Podaj liczbę: ");
+        int podanaLiczba = scan.nextInt();
 
-        //Pętl przyjmująca wartości do tablicy
-        for(int i = 0; i < tablicaLiczb.length; i++){
-            System.out.println("Podaj liczbę numer " + (i+1));
-            tablicaLiczb[i] = scan.nextInt();
+        if(podanaLiczba >= 0){
+            System.out.println("Podana liczba to: " + podanaLiczba);
+        }else if(podanaLiczba < 0){
+            System.out.println("Podana liczba to: " + Math.abs(podanaLiczba));
         }
 
-        //Wypisanie wartości z tablicy:
-        for(int liczba : tablicaLiczb){
-            System.out.println(liczba);
-        }
+
+
 
 
     }
