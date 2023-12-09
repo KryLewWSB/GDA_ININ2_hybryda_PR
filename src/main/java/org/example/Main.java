@@ -14,11 +14,7 @@ public class Main {
         System.out.println("Podaj liczbę: ");
         int podanaLiczba = scan.nextInt();
 
-        if(podanaLiczba >= 0){
-            System.out.println("Podana liczba to: " + podanaLiczba);
-        }else if(podanaLiczba < 0){
-            System.out.println("Podana liczba to: " + Math.abs(podanaLiczba));
-        }
+        System.out.println( podanaLiczba >= 0 ? "Podana liczba to: " + podanaLiczba : "Podana liczba to: " + Math.abs(podanaLiczba));
 
 
 
