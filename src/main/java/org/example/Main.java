@@ -1,14 +1,15 @@
 package org.example;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 
             Scanner scan = new Scanner(System.in);
-            System.out.println("Podaj liczbę:");
-            int a = Integer.parseInt( scan.nextLine() );
-            System.out.println(a);
+            scan.useLocale(Locale.US);
+            System.out.println("Podaj liczbę z przecinkiem:");
+            float liczba =  scan.nextFloat();
+            System.out.println(liczba);
 
 
     }
