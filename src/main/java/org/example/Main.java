@@ -5,19 +5,20 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        int tab1[] = {1, 2, 3};//deklaracja tablicy wraz z inicjalizacją
-        int[] tab2 = {1, 2, 3};//deklaracja tablicy wraz z inicjalizacją
+        Scanner scan = new Scanner(System.in);
+        int[] tablicaLiczb = new int[5];
 
-        String[] tablicaImion = new String[4];//Deklaracja 4 el. tablicy Stringów
-
-        tablicaImion[0] = "Tomek";//inicjalizacja (przypisanie) wartości
-        tablicaImion[1] = "Anna";//inicjalizacja wartości
-        tablicaImion[2] = "Łukasz";//inicjalizacja wartości
-
-        //Wypisanie wartości z tablicy z wykorzystaniem pętli foreach:
-        for(String imie : tablicaImion){
-            System.out.println(imie);
+        //Pętl przyjmująca wartości do tablicy
+        for(int i = 0; i < tablicaLiczb.length; i++){
+            System.out.println("Podaj liczbę numer " + (i+1));
+            tablicaLiczb[i] = scan.nextInt();
         }
+
+        //Wypisanie wartości z tablicy:
+        for(int liczba : tablicaLiczb){
+            System.out.println(liczba);
+        }
+
 
     }
 }
