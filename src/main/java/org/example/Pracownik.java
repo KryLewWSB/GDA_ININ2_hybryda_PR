@@ -1,10 +1,10 @@
 package org.example;
 
 public class Pracownik implements InformacjeOPracowniku {
-    private String imie;
-    private String nazwisko;
-    private Dzial dzial;
-    private int wynagrodzenie;
+    protected String imie;
+    protected String nazwisko;
+    protected Dzial dzial;
+    protected int wynagrodzenie;
 
     public Pracownik(String imie, String nazwisko, Dzial dzial, int wynagrodzenie) {
         this.imie = imie;
